@@ -1,14 +1,13 @@
-import React from "react"  // Erreur : point-virgule manquant
-
+import React from "react";
 function App() {
     return (
         <div>
-            <h1>Hello World<h1> {/* Erreur : Balise non fermée */}
+            <h1>Hello World</h1> 
             <p> This is a React app </p>
-            <button>Click Me!</button
+            <button>Click Me!</button>
         </div>
     )
 }
 
-export default App  // Erreur : point-virgule manquant
+export default App;
 
