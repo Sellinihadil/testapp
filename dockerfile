@@ -1,5 +1,6 @@
-FROM openjdk:17-jdk-slim
+FROM node:16 as build
 WORKDIR /app
-COPY ./app.jar /app/app.jar
-EXPOSE 8080
-CMD ["java", "-jar", "/app/app.jar"]
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+RUN npm run build
