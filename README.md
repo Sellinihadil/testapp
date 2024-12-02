@@ -1,1 +1,1 @@
-# teststage
+This is a React test application.
