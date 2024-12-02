@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk-alpine
-EXPOSE 8088
-COPY target/gestion-station-ski-1.0.jar gestion-station-ski-1.0.jar
-ENTRYPOINT ["java", "-jar", "/gestion-station-ski-1.0.jar"]
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY target/*.jar app.jar
+EXPOSE 8080
+CMD ["java", "-jar", "app.jar"]
